@@ -38,10 +38,8 @@ def product(key):
     return render_template('product.html', product=product)
 
 @app.route('/query', methods=['POST'])
-def create_user():
-    # print (request.form)
+def send_query():
     foo = request.form['foo']
-    # return render_template('query.html', val = foo)
     template = '''
     {%% extends 'base.html' %%}
     
