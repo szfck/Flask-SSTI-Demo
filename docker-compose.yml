@@ -1,0 +1,12 @@
+version: '3'
+services:
+  flask:
+    image: flask_demo 
+    container_name: flask_app
+    build: .
+    volumes:
+      - ./server:/flask
+    ports:
+      - 3000:3000
+    command: sh -c "tail -f /dev/null"
+    # command: python blog.py
